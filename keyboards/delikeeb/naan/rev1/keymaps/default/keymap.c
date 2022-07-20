@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "print.h"
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
@@ -153,4 +154,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     }
     return true;
+}
+
+
+void keyboard_post_init_user(void) {
+  // Customise these values to desired behaviour
+  debug_enable=true;
+  debug_matrix=true;
+  //debug_keyboard=true;
+  //debug_mouse=true;
 }

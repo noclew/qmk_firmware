@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0x9906
-#define PRODUCT_ID   0x0021
+#define PRODUCT_ID   0x0031
 #define MANUFACTURER dELIKEEb
 
 /* disable these deprecated features by default */

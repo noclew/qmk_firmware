@@ -3,12 +3,12 @@ MCU = atmega32u4
 
 # Bootloader selection
 BOOTLOADER = atmel-dfu
-
+CONSOLE_ENABLE = yes
 # Build Options
 #   change yes to no to disable
 #
 ENCODER_ENABLE = yes		# Enable Rotary Encoder
-BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = yes     # Virtual DIP switch configuration
 RGBLIGHT_ENABLE = yes        # Enable keyboard RGB underglow
 OLED_DRIVER_ENABLE = yes
 

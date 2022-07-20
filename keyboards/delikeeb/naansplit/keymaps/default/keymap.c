@@ -30,39 +30,41 @@ enum custom_keycodes {
     ADJUST
 };
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT(
         KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                           KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_MINUS, KC_BSPC,
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_BSLS,
         KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,  KC_ENT,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_UP,           KC_DOWN,     KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  RSFT_T(KC_QUOT), KC_DEL,
-        KC_LCTL, KC_LGUI, KC_LALT, LOWER,      KC_SPC,     KC_BSPC,         KC_DEL,      KC_SPC,       RAISE,   KC_RALT, KC_DOWN,  KC_LEFT, KC_RGHT
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_UP,       KC_DOWN,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  RSFT_T(KC_QUOT), KC_DEL,
+        KC_LCTL, KC_LCTL, KC_LGUI, KC_LALT,    KC_SPC,        LOWER,       KC_DEL,   KC_SPC,       RAISE,   KC_RALT, KC_DOWN,  KC_LEFT, KC_RGHT
     ),
 
     [_LOWER] = LAYOUT(
-        KC_GRV,  KC_2,    KC_2,    KC_3,    KC_4,    KC_5,                           KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_MINUS, KC_BSPC,
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_BSLS,
-        KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,  KC_ENT,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_UP,           KC_DOWN, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  RSFT_T(KC_QUOT), KC_DEL,
-        KC_LCTL, KC_LGUI, KC_LALT, LOWER,      KC_SPC,     KC_BSPC,         KC_DEL,      KC_SPC,       RAISE,   KC_RALT, KC_DOWN,  KC_LEFT, KC_RGHT
+        QK_BOOT, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______, _______,
+        _______, RGB_TOG,    RGB_RMOD,   RGB_MOD, RGB_VAD,    RGB_VAI,              _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______, _______,
+                 _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______
     ),
 
     [_RAISE] = LAYOUT(
-        KC_GRV,  KC_3,    KC_2,    KC_3,    KC_4,    KC_5,                           KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_MINUS, KC_BSPC,
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_BSLS,
-        KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,  KC_ENT,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_UP,           KC_DOWN, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  RSFT_T(KC_QUOT), KC_DEL,
-        KC_LCTL, KC_LGUI, KC_LALT, LOWER,      KC_SPC,     KC_BSPC,         KC_DEL,      KC_SPC,       RAISE,   KC_RALT, KC_DOWN,  KC_LEFT, KC_RGHT
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______, _______,
+                 _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______
     ),
 
     [_ADJUST] = LAYOUT(
-        KC_GRV,  KC_4,    KC_2,    KC_3,    KC_4,    KC_5,                           KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_MINUS, KC_BSPC,
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_BSLS,
-        KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,  KC_ENT,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, KC_UP,           KC_DOWN, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  RSFT_T(KC_QUOT), KC_DEL,
-        KC_LCTL, KC_LGUI, KC_LALT, LOWER,      KC_SPC,     KC_BSPC,         KC_DEL,      KC_SPC,       RAISE,   KC_RALT, KC_DOWN,  KC_LEFT, KC_RGHT
-    )
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______, _______,
+                 _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______
+    ),
+
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -76,7 +78,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_LOWER);
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             }
-        return false;
+        return true;
 
         case RAISE:
             if (record->event.pressed) {
@@ -86,7 +88,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_RAISE);
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             }
-        return false;
+        return true;
 
         case RESET:
             if (record->event.pressed) {
@@ -95,7 +97,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     PLAY_SONG(song_coin);
                 #endif
             }
-        return false;
+        return true;
     }
     return true;
 };

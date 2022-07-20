@@ -9,7 +9,7 @@ BOOTLOADER = caterina
 #
 SPLIT_KEYBOARD = yes		#Split Keyboard
 RGBLIGHT_ENABLE = yes        # Enable keyboard RGB underglow
-BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = yes     # Virtual DIP switch configuration
 ENCODER_ENABLE = yes		# Enable Rotary Encoder
 
 MOUSEKEY_ENABLE = yes       # Mouse keys

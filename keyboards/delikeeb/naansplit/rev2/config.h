@@ -65,13 +65,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BACKLIGHT_LEVELS 3
 //#define BACKLIGHT_BREATHING
 
+
 #define RGB_DI_PIN D4
+
+#ifdef RGBLIGHT_ENABLE
+#    define RGBLED_NUM 54 // Number of LEDs
+#    define RGBLED_SPLIT \
+        { 27, 27 }
+#    define RGBLIGHT_SPLIT
+#endif
+
+
 #ifdef RGB_DI_PIN
-#    define RGBLED_NUM 7
+#    define RGBLED_NUM 54
 #    define RGBLIGHT_HUE_STEP 8
 #    define RGBLIGHT_SAT_STEP 8
 #    define RGBLIGHT_VAL_STEP 8
-#    define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
+#    define RGBLIGHT_LIMIT_VAL 100 /* The maximum brightness level */
 #    define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 /*== all animations enable ==*/
 #    define RGBLIGHT_ANIMATIONS
