@@ -93,7 +93,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_LOWER);
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             }
-        return false;
+
 
         case RAISE:
             if (record->event.pressed) {
@@ -103,7 +103,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 layer_off(_RAISE);
                 update_tri_layer(_LOWER, _RAISE, _ADJUST);
             }
-        return false;
+
 
         case QK_BOOT:
             if (record->event.pressed) {
@@ -112,7 +112,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     PLAY_SONG(song_coin);
                 #endif
             }
-        return false;
+
     }
     return true;
 }
@@ -159,4 +159,9 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     }
     return true;
+}
+
+void keyboard_post_init_user(void) {
+    debug_enable=true;
+    debug_matrix=true;
 }

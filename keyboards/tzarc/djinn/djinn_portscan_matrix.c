@@ -35,9 +35,6 @@ void matrix_wait_for_port(stm32_gpio_t *port, uint32_t target_bitmask) {
 static void dummy_vt_callback(virtual_timer_t *vtp, void *p) {}
 
 void matrix_init_custom(void) {
-    for (int i = 0; i < MATRIX_ROWS; ++i) {
-        gpio_set_pin_input_high(row_pins[i]);
-    }
     for (int i = 0; i < MATRIX_COLS; ++i) {
         gpio_set_pin_input_high(col_pins[i]);
     }

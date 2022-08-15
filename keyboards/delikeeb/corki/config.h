@@ -20,25 +20,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 #define VENDOR_ID    0x9906
-#define PRODUCT_ID   0x0013
+#define PRODUCT_ID   0x0023
 #define MANUFACTURER dELIKEEb
 
 
 /* USB Device descriptor parameter */
-#define DEVICE_VER   0x0002
+#define DEVICE_VER   0x0001
 #define PRODUCT      corki
 
 /* key matrix size */
 #define MATRIX_ROWS 2
 #define MATRIX_COLS 8
 /* Rows */
-#define ROW_A  B5
-#define ROW_B  B6
+#define MATRIX_ROW_PINS { B5, B6 }
 
+/* Cols */
 #define SHR_LATCH C6
 #define SHR_CLOCK D4
 #define SHR_DATA  D2
-#define SHR_COLS { 0x000001, 0x000002, 0x000004, 0x000008, 0x000010, 0x000020, 0x000040, 0x000080, }
+#define SHR_COLS { 0x000001, 0x000002, 0x000004, 0x000008, 0x000010, 0x000020, 0x000040, 0x000080}
 
 /*
  * Keyboard Matrix Assignments
@@ -63,6 +63,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MATRIX_HAS_GHOST
 
 /* Bootmagic Lite key configuration */
-#define BOOTMAGIC_LITE_ROW 0
-#define BOOTMAGIC_LITE_COLUMN 0
+// #define BOOTMAGIC_LITE_ROW 0
+// #define BOOTMAGIC_LITE_COLUMN 0
 /* Columns 0 - 20 (24 with dummy columns for shift registers) */
