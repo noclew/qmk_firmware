@@ -17,16 +17,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
 #define VENDOR_ID    0x9906
 #define PRODUCT_ID   0x0023
-#define MANUFACTURER dELIKEEb
+#define MANUFACTURER "dELIKEEb"
 
 
 /* USB Device descriptor parameter */
 #define DEVICE_VER   0x0001
-#define PRODUCT      corki
+#define PRODUCT      "corki"
 
 /* key matrix size */
 #define MATRIX_ROWS 2

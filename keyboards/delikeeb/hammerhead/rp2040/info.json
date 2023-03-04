@@ -1,0 +1,16 @@
+{
+    "bootloader": "rp2040",
+    "split": {
+        "soft_serial_pin": "GP5"
+    },
+    "matrix_pins": {
+      "cols": ["GP28", "GP26", "GP20", "GP7", "GP29"],
+      "rows": ["GP14", "GP15", "GP16", "GP17", "GP18"]  
+    },
+    "processor": "RP2040",
+    "encoder": {
+      "rotary": [
+        { "pin_a": "GP0", "pin_b": "GP1" }
+      ]
+    }
+}

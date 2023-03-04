@@ -5,6 +5,14 @@
 #include "matrix.h"
 #include "quantum.h"
 
+#ifndef PIN_USED_74HC595
+#    define PIN_USED_74HC595 8
+#endif
+#ifndef PIN_START_74HC595
+#    define PIN_START_74HC595 8
+#endif
+
+
 #ifdef CONSOLE_ENABLE
 void print_bin(unsigned char value)
 {
@@ -26,22 +34,24 @@ static void    shift_out(uint32_t value);
 static const pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 
 void matrix_init_custom(void) {
-  print("--inited\n");
+  
   // set col pins
   setPinOutput(SHR_DATA);
   setPinOutput(SHR_LATCH);
   setPinOutput(SHR_CLOCK);
 
   // set row pins
+  //   default state is high (due to setPinInputHigh) and active is low (switch presumably connects to ground)
   for (int i = 0; i < MATRIX_ROWS; ++i) {
     setPinInputHigh(row_pins[i]);
   } 
+
+  print("--initiated\n"); 
 }
 
-
 bool matrix_scan_custom(matrix_row_t current_matrix[]) {
+    // print("--scanning started\n");
     bool changed = false;
-    print("--checking now\n");
     for (uint8_t col = 0; col < MATRIX_COLS; col++) {
         
         // set the column output
@@ -68,13 +78,12 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
             }
         }
     }
-    
 #ifdef CONSOLE_ENABLE
     if (changed){
         print("--matrix changed");
     }
+    // return false;
 #endif
-
     return changed;
 }
 
@@ -87,10 +96,11 @@ static uint8_t read_rows(void) {
         pin_t currentRowPin = row_pins[i];
         uint8_t reading = !readPin(currentRowPin);
         rowReading = rowReading | reading << (7-i);
-        // uprintf("%u th rows reading val %u: //  ", i, reading);
-        // uprintf("%u th rows readings:", i);
-        // print_bin(rowReading);
-        // print("\n");
+
+        uprintf("%u th rows reading val %u: //  ", i, reading);
+        uprintf("%u th rows readings:", i);
+        print_bin(rowReading);
+        print("\n");
 
         // add the reading of the current row to the combined reading. 
         combinedReading = combinedReading | rowReading;

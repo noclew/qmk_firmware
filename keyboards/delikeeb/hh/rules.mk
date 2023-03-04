@@ -1,0 +1,13 @@
+# This file intentionally left blank
+BOOTLOADER = rp2040
+BOOTMAGIC_ENABLE = yes
+
+SPLIT_KEYBOARD = yes
+# ENCODER_ENABLE = yes
+# ENCODER_MAP_ENABLE = yes
+SERIAL_DRIVER = vendor
+
+CONSOLE_ENABLE = yes
+
+POINTING_DEVICE_ENABLE = yes
+POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
