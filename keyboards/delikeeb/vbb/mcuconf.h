@@ -1,6 +1,4 @@
-/* Copyright 2020 Christopher Courtney, aka Drashna Jael're  (@drashna) <drashna@live.com>
- * Copyright 2019 Sunjun Kim
- * Copyright 2020 Ploopy Corporation
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,4 +16,9 @@
 
 #pragma once
 
-#include "trackball.h"
+#include_next <mcuconf.h>
+#undef RP_I2C_USE_I2C1
+#define RP_I2C_USE_I2C1 TRUE
+
+#undef RP_SPI_USE_SPI0
+#define RP_SPI_USE_SPI0 TRUE

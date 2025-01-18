@@ -38,11 +38,12 @@ It uses four pins from the MCU to provide 16 output pins */
 
 #define SPI_DRIVER SPID0
 #define SPI_LATCH_PIN GP0
-#define SPI_SCK_PIN GP6
-#define SPI_MISO_PIN GP4
-#define SPI_MOSI_PIN GP7
+// #define SPI_SCK_PIN GP6
+// #define SPI_MISO_PIN GP4
+// #define SPI_MOSI_PIN GP7
 #define SPI_DIVISOR 32
 #define DEBUG_MATRIX_SCAN_RATE
+
 
 
 //0x0001, 0x0002, 0x0004, 0x0008, 0x0010, 0x0020, 0x0040, 0x0080, 0x0100, 0x0200, 0x0400, 0x0800, 0x1000, 0x2000, 0x4000, 0x8000
@@ -58,8 +59,10 @@ It uses four pins from the MCU to provide 16 output pins */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 
 
+
+// trackpad
 #define PMW33XX_CS_PIN GP5 // or #define CIRQUE_PINNACLE_SPI_CS_PIN GP5
 #define POINTING_DEVICE_MOTION_PIN GP10
-// #define SPI_SCK_PIN GP2
-// #define SPI_MOSI_PIN GP3
-// #define SPI_MISO_PIN GP4
+#define SPI_SCK_PIN GP18
+#define SPI_MOSI_PIN GP19
+#define SPI_MISO_PIN GP20 

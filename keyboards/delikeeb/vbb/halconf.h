@@ -1,6 +1,4 @@
-/* Copyright 2020 Christopher Courtney, aka Drashna Jael're  (@drashna) <drashna@live.com>
- * Copyright 2019 Sunjun Kim
- * Copyright 2020 Ploopy Corporation
+/* Copyright 2020 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,4 +16,10 @@
 
 #pragma once
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 8
+#define HAL_USE_I2C TRUE
+#define HAL_USE_SPI TRUE
+#define SPI_USE_WAIT TRUE
+#define SPI_SELECT_MODE SPI_SELECT_MODE_PAD
+
+#define SERIAL_USB_BUFFERS_SIZE 256
+#include_next <halconf.h>
