@@ -1,0 +1,8 @@
+{
+    "keyboard_name": "VananaBigBone_Rev6_pwm33xx",
+    "usb": {
+        "device_version": "1.6.0",
+        "pid": "0x0502",
+        "vid": "0x9906"
+    }
+}

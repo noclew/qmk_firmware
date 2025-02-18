@@ -1,15 +1,10 @@
-# This file intentionally left blank
-CONSOLE_ENABLE = yes
+# -----595 shifter
 CUSTOM_MATRIX = lite
-OLED_DRIVER = SSD1306      # Enable Support for SSD1306 or SH1106 OLED Displays; Communicating over I2C
-
-DEFAULT_FOLDER = delikeeb/vananadiet
-WS2812_DRIVER = vendor        #
 SRC += matrix.c
-QUANTUM_LIB_SRC += spi_master.c
+SPI_DRIVER_REQUIRED = yes
 
-
-
-# pointing
-POINTING_DEVICE_ENABLE = yes
-POINTING_DEVICE_DRIVER = pmw3360
+# -----OLED 1306
+OLED_ENABLE = yes
+# Enable Support for SSD1306 or SH1106 OLED Displays; Communicating over I2C
+OLED_DRIVER = ssd1306
+   

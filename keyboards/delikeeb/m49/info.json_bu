@@ -1,0 +1,66 @@
+{
+    "manufacturer": "aaa",
+    "keyboard_name": "cleo rev1",
+    "maintainer": "sss",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "board":"GENERIC_RP_RP2040",
+    "debounce": 10,
+    "diode_direction": "COL2ROW",
+    "encoder": {
+        "enabled": true,
+        "rotary": [
+            {
+                "pin_a": "GP20",
+                "pin_b": "GP19",
+                "resolution": 4
+            }
+        ]
+    },
+    "features": {
+        "audio": false,
+        "backlight": false,
+        "bootmagic": true,
+        "command": false,
+        "console": true,
+        "encoder": true,
+        "encoder_map": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "oled": false,
+        "rgblight": false,
+        "wpm": true
+    },
+    "tapping": {
+        "toggle": 2
+    },
+    "url": "xxx",
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0x6560",
+        "vid": "0xBABA"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [ {"label": "~", "matrix": [0, 0], "x":0, "y":0}, {"label": "1", "matrix": [0, 1], "x":1, "y":0}, {"label": "2", "matrix": [0, 2], "x":2, "y":0}, {"label": "3", "matrix": [0, 3], "x":3, "y":0}, {"label": "4", "matrix": [6, 0], "x":4, "y":0}, {"label": "5", "matrix": [5, 0], "x":5, "y":0}, 
+                        {"label": "6", "matrix": [5, 7], "x":10.5, "y":0}, {"label": "7", "matrix": [6, 7], "x":11.5, "y":0}, {"label": "8", "matrix": [0, 4], "x":12.5, "y":0}, {"label": "9", "matrix": [0, 5], "x":13.5, "y":0}, {"label": "0", "matrix": [0, 6], "x":14.5, "y":0}, {"label": "BS", "matrix": [0, 7], "x":15.5, "y":0}, 
+
+                        {"label": "Tab", "matrix": [1, 0], "x":0, "y":1}, {"label": "q", "matrix": [1, 1], "x":1, "y":1}, {"label": "w", "matrix": [1, 2], "x":2, "y":1}, {"label": "r", "matrix": [1, 3], "x":3, "y":1}, {"label": "r", "matrix": [6, 1], "x":4, "y":1}, {"label": "t", "matrix": [5, 1], "x":5, "y":1}, 
+                        {"label": "y", "matrix": [5, 6], "x":10.5, "y":1}, {"label": "u", "matrix": [6, 6], "x":11.5, "y":1}, {"label": "i", "matrix": [1, 4], "x":12.5, "y":1}, {"label": "o", "matrix": [1, 5], "x":13.5, "y":1}, {"label": "p", "matrix": [1, 6], "x":14.5, "y":1}, {"label": "\\", "matrix": [1, 7], "x":15.5, "y":1}, 
+                        
+                        {"label": "Caps", "matrix": [2, 0], "x":0, "y":2}, {"label": "a", "matrix": [2, 1], "x":1, "y":2}, {"label": "s", "matrix": [2, 2], "x":2, "y":2}, {"label": "f", "matrix": [2, 3], "x":3, "y":2}, {"label": "f", "matrix": [6, 2], "x":4, "y":2}, {"label": "g", "matrix": [5, 2], "x":5, "y":2}, {"label": "gg", "matrix": [7, 0], "x":6, "y":2}, 
+                        {"label": "hh", "matrix": [7, 7], "x":9.5, "y":2}, {"label": "h", "matrix": [5, 5], "x":10.5, "y":2}, {"label": "j", "matrix": [6, 5], "x":11.5, "y":2}, {"label": "k", "matrix": [2, 4], "x":12.5, "y":2}, {"label": "l", "matrix": [2, 5], "x":13.5, "y":2}, {"label": ";", "matrix": [2, 6], "x":14.5, "y":2}, {"label": "Ent", "matrix": [2, 7], "x":15.5, "y":2}, 
+                        
+                        {"label": "RE", "matrix": [8, 3], "x":7.75, "y":2.5},
+                        
+                        {"label": "Lshf", "matrix": [3, 0], "x":0, "y":3}, {"label": "z", "matrix": [3, 1], "x":1, "y":3}, {"label": "x", "matrix": [3, 2], "x":2, "y":3}, {"label": "c", "matrix": [3, 3], "x":3, "y":3}, {"label": "v", "matrix": [6, 3], "x":4, "y":3}, {"label": "b", "matrix": [5, 3], "x":5, "y":3}, {"label": "bb", "matrix": [7, 1], "x":6, "y":3}, 
+                        {"label": "nn", "matrix": [7, 6], "x":9.5, "y":3}, {"label": "n", "matrix": [5, 4], "x":10.5, "y":3}, {"label": "m", "matrix": [6, 4], "x":11.5, "y":3}, {"label": ",", "matrix": [3, 4], "x":12.5, "y":3}, {"label": ".", "matrix": [3, 5], "x":13.5, "y":3}, {"label": "/", "matrix": [3, 6], "x":14.5, "y":3}, {"label": "Rsf", "matrix": [3, 7], "x":15.5, "y":3}, 
+                        
+                        {"label": "LCtr", "matrix": [4, 0], "x":0.5, "y":4, "w":1.25}, {"label": "LWin", "matrix": [4, 1], "x":1.75, "y":4, "w":1.25}, {"label": "LAlt", "matrix": [4, 2], "x":3, "y":4, "w":1.25}, {"label": "LMO", "matrix": [4, 3], "x":4.25, "y":4, "w":1.25}, {"label": "Spc", "matrix": [7, 2], "x":5.5, "y":4, "w":1.5}, 
+                        {"label": "NCL", "matrix": [7, 3], "x":7, "y":4, "w":1.25}, {"label": "NCR", "matrix": [7, 4], "x":8.25, "y":4, "w":1.25}, 
+                        {"label": "MO", "matrix": [7, 5], "x":9.5, "y":4, "w":1.5}, {"label": "Spc", "matrix": [4, 4], "x":11, "y":4, "w":1.25}, {"label": "RMO", "matrix": [4, 5], "x":12.25, "y":4, "w":1.25}, {"label": "RAlt", "matrix": [4, 6], "x":13.5, "y":4, "w":1.25}, {"label": "RCtr", "matrix": [4, 7], "x":14.75, "y":4, "w":1.25}
+                    ]
+        }
+    }
+}
